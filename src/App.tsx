@@ -9,7 +9,6 @@ import DeleteCategoria from "./componentes/categorias/DeleteCategoria";
 import { ToastContainer } from "react-toastify";
 import FormProduto from "./componentes/produtos/FormProdutos";
 import DeleteProduto from "./componentes/produtos/DeleteProduto";
-import ListaProdutos from "./componentes/produtos/ListaProdutos";
 import Produtos from "./pages/Produtos";
 
 
