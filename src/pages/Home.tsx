@@ -1,4 +1,5 @@
 import { Pill, Truck, Heartbeat } from "phosphor-react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
@@ -20,12 +21,27 @@ export default function Home() {
                     </p>
 
                     <div className="flex flex-wrap gap-3">
-                        <button className="px-5 py-2.5 rounded-full bg-gradient-main text-white font-semibold text-sm md:text-base shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition">
+
+                        {/* Botão para Produtos */}
+                        <Link
+                            to="/produtos"
+                            className="px-5 py-2.5 rounded-full bg-gradient-main text-white font-semibold 
+                   text-sm md:text-base shadow-lg hover:shadow-xl transform 
+                   hover:-translate-y-0.5 transition"
+                        >
                             Ver produtos em destaque
-                        </button>
-                        <button className="px-5 py-2.5 rounded-full border border-primary-dark text-primary-dark font-semibold text-sm md:text-base bg-white hover:bg-primary-light/10 transition">
+                        </Link>
+
+                        {/* Botão para Categorias */}
+                        <Link
+                            to="/categorias"
+                            className="px-5 py-2.5 rounded-full border border-primary-dark 
+                   text-primary-dark font-semibold text-sm md:text-base bg-white 
+                   hover:bg-primary-light/10 transition"
+                        >
                             Conhecer categorias
-                        </button>
+                        </Link>
+
                     </div>
 
                     <div className="flex flex-wrap gap-4 text-xs md:text-sm text-slate-600 pt-2">

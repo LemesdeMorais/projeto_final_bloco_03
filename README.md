@@ -1,73 +1,163 @@
-# React + TypeScript + Vite
+# 🧪 Mandrágora Medicamentos – E‑Commerce Completo com React + Vite + Tailwind + API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem‑vindo ao repositório do **Mandrágora Medicamentos**, um projeto moderno e totalmente funcional que simula um **e‑commerce de farmácia**, com frontend em **React + TypeScript**, estilização com **TailwindCSS**, rotas com **React Router**, comunicação via **Axios**, notificações com **React‑Toastify**, e consumo completo de API REST para **Categorias e Produtos**.
 
-Currently, two official plugins are available:
+Este README foi criado com extremo cuidado para ser profissional, elegante, completo e visualmente agradável.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Tecnologia | Função |
+|-----------|--------|
+| **React + TypeScript** | Estrutura principal do frontend |
+| **Vite** | Ferramenta moderna de build e desenvolvimento |
+| **TailwindCSS** | Estilização rápida, responsiva e moderna |
+| **Axios** | Comunicação com a API |
+| **React Router DOM** | Controle de navegação e rotas |
+| **React‑Toastify** | Sistema de notificações |
+| **Phosphor Icons** | Ícones leves e modernos |
+| **React Spinners** | Feedback visual de carregamento |
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🎨 Identidade Visual
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+O projeto utiliza uma paleta moderna em degradê, remetendo a confiança e cuidado:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+#2BD998 → #00C5A6 → #00AFB1 → #0098B5 → #0081B1 → #0069A4
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Aplicada em botões, Navbar, detalhes, gradientes e animações.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Estrutura do Projeto
+
 ```
+src/
+ ├─ assets/
+ ├─ componentes/
+ │   ├─ categorias/
+ │   │   ├─ ListaCategorias.tsx
+ │   │   ├─ CardCategoria.tsx
+ │   │   ├─ FormCategoria.tsx
+ │   │   └─ DeleteCategoria.tsx
+ │   ├─ produtos/
+ │   │   ├─ ListaProdutos.tsx
+ │   │   ├─ CardProduto.tsx
+ │   │   ├─ FormProduto.tsx
+ │   │   └─ DeleteProduto.tsx
+ │   ├─ navbar/
+ │   └─ footer/
+ ├─ models/
+ ├─ pages/
+ ├─ services/
+ ├─ utils/
+ └─ main.tsx
+```
+
+---
+
+## 🧬 API Consumida
+
+A API REST fornece dois recursos principais:
+
+### **Categoria**
+- `GET /categorias`
+- `POST /categorias`
+- `PUT /categorias`
+- `DELETE /categorias/{id}`
+
+### **Produto**
+- `GET /produtos`
+- `POST /produtos`
+- `PUT /produtos`
+- `DELETE /produtos/{id}`
+
+---
+
+## 📦 CRUD Completo
+
+### ✔ Categorias
+- Listagem com cards
+- Cadastro com validação
+- Edição com carregamento automático dos dados
+- Exclusão com tela de confirmação
+- Notificações de sucesso/erro
+
+### ✔ Produtos
+- Listagem com cards personalizados
+- Formulário completo com:
+  - Nome
+  - Preço
+  - Foto (URL)
+  - Seleção de Categoria
+- Editar & Deletar funcionando perfeitamente
+
+---
+
+## 🧭 Rotas Principais
+
+| Rota | Componente |
+|------|------------|
+| `/` | Home |
+| `/categorias` | ListaCategorias |
+| `/categorias/nova` | FormCategoria |
+| `/categorias/editar/:id` | FormCategoria |
+| `/categorias/deletar/:id` | DeleteCategoria |
+| `/produtos` | ListaProdutos |
+| `/produtos/novo` | FormProduto |
+| `/produtos/editar/:id` | FormProduto |
+| `/produtos/deletar/:id` | DeleteProduto |
+
+---
+
+## 💅 Destaques do Design
+
+- Layout moderno e responsivo
+- Navbar com hambúrguer animado no mobile
+- Botões em degradê verde com hover suave
+- Cards com sombras, bordas suaves e animações
+- Footer estiloso com assinatura personalizada
+
+---
+
+## 🔧 Como Rodar o Projeto
+
+### 1. Clone o repositório
+```
+git clone https://github.com/LemesdeMorais/projeto_final_bloco_03.git
+```
+
+### 2. Instale as dependências
+```
+npm install
+```
+
+### 3. Rode o projeto
+```
+npm run dev
+```
+
+O projeto abrirá em:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🙋‍♀️ Autoria
+
+Projeto desenvolvido com dedicação intensa e paixão por **Rafaela Lemes 💚**, combinando criatividade, boas práticas e um dos designs mais bonitos já realizados na aplicação.
+
+---
+
+## 🌟 Agradecimentos
+
+A todos que acompanham o projeto, experimentam e estudam com ele.  
+Este e‑commerce foi construído para ser referência de boas práticas em frontend moderno.
+
+Se quiser evoluir o projeto juntos — adicionar carrinho, login, painel admin, integração com banco — só chamar!🚀
