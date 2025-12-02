@@ -10,9 +10,17 @@ export default function Footer() {
                     <span className="font-medium">Feito com carinho por</span>
                     <span className="relative inline-flex overflow-hidden rounded-full bg-white/20 px-3 py-1">
                         <span className="absolute inset-0 bg-white/40 blur-xl opacity-60 animate-shimmer" />
-                        <span className="relative z-10 font-semibold">
-                            Rafaela Lemes 💚
-                        </span>
+                        <a
+                            href="https://www.linkedin.com/in/rafaela-lemes-a310861b6/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="relative z-10 font-semibold text-white hover:text-[#2BD998] transition-colors duration-300 group">
+                            Rafaela Lemes
+                            <span className="inline-block ml-1 group-hover:scale-125 group-hover:rotate-6 transition-transform duration-300">
+                                💚
+                            </span>
+                        </a>
+
                     </span>
                 </div>
             </div>
