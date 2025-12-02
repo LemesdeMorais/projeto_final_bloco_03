@@ -4,7 +4,7 @@ export default function Home() {
     return (
         <div className="bg-slate-50 min-h-[70vh]">
             <section className="max-w-6xl mx-auto px-4 py-10 md:py-16 grid md:grid-cols-2 gap-10 items-center">
-                {/* Texto principal */}
+
                 <div className="space-y-6">
                     <h2 className="text-4xl md:text-5xl font-extrabold leading-tight">
                         <span className="block text-slate-900">Sua farmácia</span>
@@ -40,7 +40,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* Cards / destaques */}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="col-span-1 sm:col-span-2 bg-white rounded-2xl p-5 shadow-md border border-primary-light/20 animate-float">
                         <div className="flex items-center gap-3">
