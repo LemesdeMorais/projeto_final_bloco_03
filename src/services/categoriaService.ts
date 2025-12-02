@@ -1,7 +1,7 @@
 import axios from "axios";
 import type { Categoria } from "../models/Categoria";
 
-const BASE_URL = "https://farmacia-ug0p.onrender.com/";
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
 
 export const api = axios.create({
     baseURL: BASE_URL,
